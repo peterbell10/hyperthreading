@@ -1,6 +1,6 @@
 * Method
-** Thread pool
-- [[file:thread_pool.h][Custom thread-pool]] with shared work-queue to submit jobs.
+** Parallel for loop
+- [[file:thread_pool.h][Custom multi-threading code]] to create parallel operations.
 - Same number of threads launched, different number of jobs submitted
 
 ** Multi-threaded kernel functions
