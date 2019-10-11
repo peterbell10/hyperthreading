@@ -24,6 +24,9 @@ target_link_libraries(div_mem PRIVATE kernels)
 add_executable(div_add div_add.cpp)
 target_link_libraries(div_add PRIVATE kernels)
 
+add_executable(add_mem div_add.cpp)
+target_link_libraries(add_mem PRIVATE kernels)
+
 add_executable(nbody nbody.cpp)
 target_link_libraries(nbody PRIVATE kernels)
 

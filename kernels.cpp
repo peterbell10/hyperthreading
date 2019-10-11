@@ -86,7 +86,7 @@ double f[Nbody][Ndim]{};
 
 void nbody_forces(int thread_count)
 {
-  constexpr int repeats = 3860;
+  constexpr int repeats = 8175;
   threading::parallel_for(thread_count, 0, Nbody,
     [&] (int64_t begin, int64_t end) {
       for (int i = 0; i < repeats; ++i) {

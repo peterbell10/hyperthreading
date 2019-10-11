@@ -15,53 +15,36 @@
 * Benchmark results
 ** Results
 *** [[file:add.cpp][Floating point addition]]
-#+CAPTION: add
-#+NAME: figure 1
-[[./figs/add.png]]
+    [[./figs/add.png]]
 
 *** [[file:div.cpp][Division bound task]]
-#+CAPTION: Division
-#+NAME: figure 2
-[[./figs/div.png]]
+    [[./figs/div.png]]
 
 *** [[file:mem.cpp][Memory bound task]]
-#+CAPTION: Memory
-#+NAME: figure 1
 [[./figs/mem.png]]
 
-** Why float add is different
-#+CAPTION: Skylake scheduler
-#+NAME: scheduler
-#+ATTR_ORG: :width 1000
-[[./figs/skylake_scheduler.png]]
+** Why add is different
+   [[./figs/skylake_scheduler.png]]
 
 ** Multiple kernel benchmarks
 *** [[file:div_add.cpp][Division and addition]]
-#+CAPTION: Division, add
-#+NAME: figure 4
 [[./figs/div_add.png]]
 
+*** [[file:add_mem.cpp][Addition and memory]]
+[[./figs/add_mem.png]]
+
 *** [[file:div_mem.cpp][Division and memory]]
-#+CAPTION: Division, memory
-#+NAME: figure 1
 [[./figs/div_mem.png]]
 
 ** More complex kernels
 *** [[file:nbody.cpp][N-body forces calculation]]
-#+CAPTION: n-body gravity forces
-#+NAME: figure 1
 [[./figs/nbody.png]]
 
 *** [[file:nbody_add.cpp][N-body and addition]]
-#+CAPTION: n-body, add
-#+NAME: figure 1
-[[./figs/nbody_add.png]]
+    [[./figs/nbody_add.png]]
 
 *** [[file:nbody_mem.cpp][N-body and memory]]
-#+CAPTION: n-body, memory
-#+NAME: figure 1
-[[./figs/nbody_mem.png]]
-
+    [[./figs/nbody_mem.png]]
 
 * Building and running IACA
 ** Building
@@ -71,5 +54,5 @@
 
 ** Running intel architecture code analyser
 - Uncomment IACA_BEGIN and IACA_END from the kernel code
-- make -C build
+- cmake --build build
 - iaca/iaca -arch HSW build/libkernels.a
