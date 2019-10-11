@@ -92,7 +92,7 @@ void nbody_forces(int thread_count)
       for (int i = 0; i < repeats; ++i) {
         for (int64_t i = begin; i < end; i++) {
           for (int64_t j = 0; j < Nbody; j++) {
-            IACA_START
+            // IACA_START
             double r = 0.0;
             for (int l = 0; l < Ndim; ++l) {
               double dr = pos[i][l] - pos[j][l];
@@ -105,7 +105,7 @@ void nbody_forces(int thread_count)
               f[i][l] += weight * (pos[j][l] - pos[i][l]);
             }
           }
-          IACA_END
+          // IACA_END
         }
       }
     });
